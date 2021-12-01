@@ -7,28 +7,61 @@
 <html lang="en">
   <head>
     <title>Jake Scrutchin's Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+      caption {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #0d1f2d;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+      table {
+        width: 90%;
+        margin: auto;
+      }
+      tr {
+        height: 30px;
+      }
+      th {
+        background-color: #bc6c25;
+        color: #fefae0;
+      }
+      tbody tr:nth-child(odd) {
+            background-color: #dda15e; 
+        } 
+    </style>
   </head>
   <body>
     <header>
       <h1>Portfolio for Jake Scrutchin</h1>
     </header>
+    
+    <nav>
+      <!-- Nav element will include navigation buttons or links -->
 
-    <hr />
-    <nav><!-- Nav element will include navigation buttons or links -->
-      
       <p><a href="">Home</a></p>
       <p><a href="contact.html">Contact</a></p>
       <p><a href="projects.html">Projects</a></p>
       <p><a href="testimonials.html">Testimonials</a></p>
     </nav>
 
-    <hr />
-
     <section>
       <article id="about-me">
         <h2><em>About Me</em></h2>
-        <img src="images/about.jpeg" alt="picture of my daughter and I during the ice storm">
-        <p>I am graduated from the <strong>University of Houston</strong> with a BBA in MIS.</p>
+        <img
+          src="images/about.jpeg"
+          alt="picture of my daughter and I during the ice storm"
+        />
+        <p>
+          I am graduated from the <strong>University of Houston</strong> with a
+          BBA in MIS.
+        </p>
         <p>
           Programming is a recent love for me, I have been learning to program
           for the past 2 years and grow to love it more each day.
@@ -37,9 +70,11 @@
 
       <article id="experience">
         <h2><em>Past Experience</em></h2>
-        <img src="images/sun.jpeg" alt="picture of the moon in Cyprus">
+        <img src="images/sun.jpeg" alt="picture of the moon in Cyprus" />
         <table>
-          <caption>Employment History</caption>
+          <caption>
+            Employment History
+          </caption>
           <tr>
             <th>Years of Employment</th>
             <th>Title</th>
@@ -65,7 +100,10 @@
 
       <article id="hobbies">
         <h2><em>Hobbies</em></h2>
-        <img src="images/golf.jpeg" alt="picture of a long drive I hit, 344 yards">
+        <img
+          src="images/golf.jpeg"
+          alt="picture of a long drive I hit, 344 yards"
+        />
         <ul>
           <li>Musicians</li>
           <ol>
@@ -98,7 +136,6 @@
     </section>
 
     <footer>
-      <hr />
       <p>&copy; 2021 Jake Scrutchin. All rights reserved.</p>
     </footer>
   </body>

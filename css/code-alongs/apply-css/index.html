@@ -7,6 +7,12 @@ Most recent revision:
 <html lang="en"> 
     <head> 
         <title>Marci Kitzmiller's Portfolio</title>	
+        <link rel="stylesheet" href="teststyles.css">
+        <style>
+            header {
+                background-color: darkgrey;
+            }
+        </style>
     </head> 
     
     <body>
@@ -15,16 +21,16 @@ Most recent revision:
                 <h1>Portfolio for Marci Kitzmiller</h1>
             </header>
 
-            <nav> <!-- The nav element will include navigation buttons or links -->
-                <hr /> 
+            <nav class="border"> <!-- The nav element will include navigation buttons or links -->
+                <hr style="border: thin dotted red;" /> 
                 <p><a href="projects.html">Projects</a></p>
                 <p><a href="contact.html">Contact Me</a></p>
                 <p><a href="testimonials.html">Testimonials</a></p>
-                <hr />
+                <hr style="width: 50%; border: solid 2px blue;" />
             </nav>
 
             <section> <!-- The section element contains the three chunks we are using to sell ourselves in this page. -->
-                <article id="about"> <!-- This is the first chunk inside the section element. -->
+                <article id="about" class="border"> <!-- This is the first chunk inside the section element. -->
                       <h2><em>About Me</em></h2> 
                       <img src="images/marci-kitzmiller-350px.jpg" alt="Portrait of Marci Kitzmiller" width="250" />
                       <p>Sed nisi est, aliquam non gravida et, euismod id ex. <strong>Praesent molestie metus justo</strong>, non tristique nisl blandit id. Proin porta nisl eros, vitae laoreet eros vestibulum in. Integer faucibus malesuada purus quis consectetur.</p> 
@@ -93,7 +99,7 @@ Most recent revision:
                 </article>
             </section>
 
-            <footer> <!-- The footer is a block at the bottom of the page. -->
+            <footer style="background-color: fuchsia"> <!-- The footer is a block at the bottom of the page. -->
                 <hr />
                 <p>&copy; 2020 Marci Kitzmiller. All rights reserved.</p>
             </footer>
