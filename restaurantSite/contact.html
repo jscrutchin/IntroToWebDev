@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align: center">Jake's Burgers & More</h1>
+    </header>
+
+    <hr />
+
+    <nav style="display: flex">
+      <p style="padding-right: 10px"><a href="index.html">Home</a></p>
+      <p style="padding-right: 10px"><a href="menu.html">Menu</a></p>
+      <p style="padding-right: 10px"><a href="contact.html">Contact Us</a></p>
+    </nav>
+
+    <hr />
+
+    <form style="text-align: center;" action="submit.html" method="POST">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="lastName">Email:</label>
+        <input type="text" name="email" id="email"><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" id="phone"><br>
+
+        <label for="">Reason for Inquiry:</label>
+        <select name="" id="">
+            <option value="catering" selected>Catering</option>
+            <option value="privateParty">Private Party</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <label for="information">Additional Information:</label>
+        <textarea name="information" id="information"></textarea><br>
+
+            <label for="">Have you been to the restaurant?</label>
+            <input type="radio" name="questionnaire" id="choice2" value="no" checked>
+            <label for="choice2">No</label>
+            <input type="radio" name="questionnaire" id="choice1" value="yes">
+            <label for="choice1">Yes</label><br>
+
+            <span>Best days to contact you:</span>
+            <input type="checkbox" name="monday" id="day">
+            <label for="monday">M</label>
+            <input type="checkbox" name="tuesday" id="day">
+            <label for="tuesday">T</label>
+            <input type="checkbox" name="wednesday" id="day">
+            <label for="wednesday">W</label>
+            <input type="checkbox" name="thursday" id="day">
+            <label for="thursday">Th</label>
+            <input type="checkbox" name="friday" id="day">
+            <label for="friday">F</label><br>
+            
+            <input type="submit" value="Send Request">
+        
+    </form>
+    
+
+    <footer>
+        <hr>
+        <p style="text-align: center;">12345 Random St. Houston, TX, 77001</p>
+        <p style="text-align: center;">713-123-4567</p>
+    </footer>
+  </body>
+</html>
