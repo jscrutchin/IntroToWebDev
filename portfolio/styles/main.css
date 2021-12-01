@@ -8,6 +8,8 @@ body {
   background-color: #f1faee;
   font-family: arial, helvetica, sans-serif;
   color: #0d1f2d;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 header,
@@ -80,3 +82,45 @@ textarea {
   background-color: #fff;
   resize: none;
 }
+
+.clear-float {
+  clear: both;
+}
+
+article img {
+  float: left;
+}
+
+.right-content {
+  float: left;
+}
+
+article {
+  margin-bottom: 16px;
+}
+
+nav a {
+  background-color: #606c38;
+  color: #fefae0;
+  padding: 8px;
+  border: thin solid #0d1f2d;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 20px;
+  width: 100px;
+  float: left;
+}
+nav a:visited {
+  color: #e4c3ad; 
+}
+
+nav a:hover {
+  background-color: #fefae0;
+  color: #606c38;
+}
+
+nav a:active {
+  font-weight: bold;
+}
+
