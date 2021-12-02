@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sample</h1>
+
+      <form
+        name="displayEvens"
+        class="needs-validation"
+        onsubmit="return validate();" novalidate
+      >
+        <label for="start">Starting Number</label>
+        <input type="number" class="form-control" id="start" required />
+        <div class="invalid-feedback">
+          Start is required and must be a number.
+        </div>
+
+        <label for="end">Ending Number</label>
+        <input type="number" class="form-control" id="end" required />
+        <div class="invalid-feedback">
+          End is required and must be a number.
+        </div>
+
+        <label for="step">Step</label>
+        <input type="number" class="form-control" id="step" required>
+        <div class="invalid-feedback">
+            Step is required and must be a number.
+          </div>
+
+        <button type="submit" id="submitButton" class="btn btn-secondary">
+          Display Evens
+        </button>
+      </form>
+
+      <div id="results" style="display: none">
+          <p>Here are the even numbers between <span id="startInput"></span> and <span id="endInput"></span> by <span id="stepInput"></span>'s</p>
+          <div id="stepResults"></div>
+      </div>
+
+
+
+
+
+    </div>
+
+    <script src="displayEvens.js"></script>
+  </body>
+</html>
