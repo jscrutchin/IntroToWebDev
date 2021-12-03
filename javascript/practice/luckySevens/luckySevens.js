@@ -1,18 +1,11 @@
 var play = document.getElementById('play');
 var bet = document.getElementById('bet');
-
-var startingBet = document.getElementById('startingBet');
-var totalRolls = document.getElementById('totalRolls');
-var highestAmount = document.getElementById('highestAmount');
-var rollsAtHighest = document.getElementById('rollsAtHighest');
-
-var results = document.getElementById('results');
-
-var gameMoney = 0;
 var sum = 0;
+var gameMoney = 0;
 var gameRolls = 0;
 var gameHighest = 0;
 var gameRollsHighest = 0;
+var active = true;
 
 function rollDice() {
     var roll1 = Math.floor(Math.random() * 6) + 1;
@@ -22,15 +15,28 @@ function rollDice() {
     return sum;
 }
 
+function resetGame() {
+    gameMoney = 0;
+    gameRolls = 0;
+    gameHighest = 0;
+    gameRollsHighest = 0;
+    play.value = 'Play Again';
+}
+
 function playGame() {
-    if (!bet.value > 0) {
+    if (!active){
+        play.value = 'Play'
+        console.clear();
+        active = true;
+        document.getElementById('results').style.opacity = '0';
+    } else if (!bet.value > 0) {
         alert('Bet must be higher than $0');
     } else {
         gameMoney = bet.value;
         while (!gameMoney == 0) {
             rollDice();
             if (sum === 7) {
-                gameMoney += 4;
+                gameMoney = gameMoney + 4;
                 gameRolls++;
                 if (gameMoney > gameHighest) {
                     gameHighest = gameMoney;
@@ -40,19 +46,18 @@ function playGame() {
                 gameMoney--;
                 gameRolls++;
             }
+            console.log('$' + gameMoney)
         }
-        //results.style.display = 'block';
-        startingBet.innerHTML = '$' + bet.value;
-        totalRolls.innerHTML = gameRolls;
-        highestAmount.innerHTML = '$' + gameHighest;
-        rollsAtHighest.innerHTML = gameRollsHighest;
 
-        gameMoney = 0;
-        gameRolls = 0;
-        gameHighest = 0;
-        gameRollsHighest = 0;
-
-        console.log(gameMoney, gameRolls, gameHighest, gameRollsHighest)
+        document.getElementById('startingBet').innerHTML = '$' + bet.value;
+        document.getElementById('totalRolls').innerHTML = gameRolls;
+        document.getElementById('highestAmount').innerHTML = '$' + gameHighest;
+        document.getElementById('rollsAtHighest').innerHTML = gameRollsHighest;
+        document.getElementById('results').style.opacity = '100';
+        active = false;
+        
+        resetGame();
+        
     }
     
 }
