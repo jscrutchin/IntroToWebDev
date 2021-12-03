@@ -30,7 +30,7 @@ function playGame() {
         console.clear();
         active = true;
         document.getElementById('results').style.opacity = '0';
-    } else if (!bet.value > 0) {
+    } else if (bet.value <= 0) {
         alert('Bet must be higher than $0');
     } else {
         gameMoney = parseInt(bet.value);
