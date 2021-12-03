@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+}
+input {
+    margin-bottom: 20px;
+}
+
+table {
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+table td {
+    border: solid 2px black;
+    background-color: lightgrey;
+}
