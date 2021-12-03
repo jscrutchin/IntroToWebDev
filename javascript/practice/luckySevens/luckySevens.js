@@ -26,17 +26,18 @@ function resetGame() {
 function playGame() {
     if (!active){
         play.value = 'Play'
+        bet.value = '';
         console.clear();
         active = true;
         document.getElementById('results').style.opacity = '0';
     } else if (!bet.value > 0) {
         alert('Bet must be higher than $0');
     } else {
-        gameMoney = bet.value;
-        while (!gameMoney == 0) {
+        gameMoney = parseInt(bet.value);
+        while (gameMoney > 0) {
             rollDice();
             if (sum === 7) {
-                gameMoney = gameMoney + 4;
+                gameMoney += 4;
                 gameRolls++;
                 if (gameMoney > gameHighest) {
                     gameHighest = gameMoney;
